@@ -1,0 +1,435 @@
+/* ==========================================
+   Estilos personalizados
+   Gestión de Personal — Constructora Andina
+   Taller de Tecnologías Web | IF101IINF
+   ========================================== */
+
+/* Variables de color corporativo */
+:root {
+    --color-azul:            #1c2b4a;
+    --color-azul-oscuro:     #111c2e;
+    --color-dorado:          #c9a96e;
+    --color-dorado-oscuro:   #a8823a;
+    --color-fondo-claro:     #FDFBF7;
+    --color-error:           #cc3333;
+    --color-exito:           #2e7d32;
+    --color-texto:           #333333;
+    --color-texto-suave:     #666666c7;
+    --color-texto-hueso:     #f5f5f5;
+    --color-texto-en-oscuro: #e2e8f0;
+    --color-texto-suave-en-oscuro: #94a3b8;
+}
+
+/* ---- RESET BÁSICO PARA MAS CONSISTENCIA ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo-claro);
+    /* Espacio para que el navbar fijo no tape el contenido */
+    padding-top: 70px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.navbar {
+    background-color: var(--color-azul);
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-dorado);
+    letter-spacing: 0.04rem;
+}
+
+.navbar-brand:hover {
+    color: #dbbf84;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 1rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.activo {
+    color: var(--color-dorado); 
+}
+
+/* ELEMENTOS REUTILIZABLES*/
+
+/* Etiqueta pequeña sobre los títulos de sección */
+.etiqueta-seccion {
+    font-size: 0.9rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    color: var(--color-dorado);
+    margin-bottom: 0.9rem;
+}
+
+/* Variante para secciones de fondo claro */
+.etiqueta-oscura {
+    color: var(--color-dorado);
+}
+
+/* Divisor dorado decorativo */
+.divisor-dorado {
+    width: 7rem;
+    height: 3px;
+    background-color: var(--color-dorado);
+    margin-bottom: 1.5rem;
+}
+
+/* Centrar el divisor */
+.divisor-centrado {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título principal en el hero */
+.titulo-principal {
+    font-size: 2.8rem;
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--color-dorado);
+    margin-bottom: 1.5rem;
+}
+
+.titulo-principal em {
+    color: var(--color-dorado);
+    font-style: italic;
+}
+
+/* Título de las secciones internas */
+.titulo-seccion {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--color-azul);
+    margin-bottom: 0.5rem;
+}
+
+/* ---- BOTONES ---- */
+
+/* Botón principal (dorado) */
+.btn-principal {
+    background-color: var(--color-dorado);
+    color: var(--color-azul);
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.btn-principal:hover {
+    background-color: var(--color-dorado-oscuro);
+    color: var(--color-texto-en-oscuro);
+}
+
+/* Botón secundario (contorno dorado) */
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-dorado);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--color-dorado);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-dorado);
+    color: var(--color-azul);
+}
+
+/* SECCIÓN HERO (INICIO) */
+
+.seccion-hero {
+    background-color: var(--color-azul);
+    color: var(--color-texto-suave);
+    padding: 5rem 0 4.5rem 0;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Párrafo descriptivo del hero */
+.parrafo-hero {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-texto-hueso);
+    margin-bottom: 1.5rem;
+}
+
+/* Lista de características sin viñetas por defecto */
+.lista-sistema {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.lista-sistema li {
+    position: relative;
+    padding: 0.35rem 0 0.35rem 1.4rem;
+    color: var(--color-texto-hueso);
+    font-size: 0.93rem;
+    line-height: 1.5;
+}
+
+/* Guión dorado antes de cada ítem de la lista */
+.lista-sistema li::before {
+    content: "\2013";
+    position: absolute;
+    left: 0;
+    color: var(--color-dorado);
+}
+
+/* SECCIÓN PERSONAL */
+
+.seccion-personal {
+    background-color: #68e;
+    padding: 5rem 0;
+}
+
+/* Contenedor del aviso de lista vacía */
+.texto-vacio-contenedor {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--color-texto)
+}
+
+.texto-vacio {
+    color: var(--color-texto);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/*  Tarjeta de empleado  */
+
+.tarjeta-empleado {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid #e2e2e2;
+    padding: 1.5rem;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.2s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Efecto hover en la tarjeta */
+.tarjeta-empleado:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Línea dorada en el borde superior de cada tarjeta */
+.tarjeta-empleado::before {
+    content: "";
+    border-radius: 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    right: 0.1rem;
+    height: 4px;
+    background-color: var(--color-dorado);
+}
+
+/* Nombre del empleado */
+.nombre-empleado {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-azul);
+    margin-bottom: 0.3rem;
+    padding-top: 0.3rem;
+}
+
+/* Cargo del empleado */
+.cargo-empleado {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    color: var(--color-dorado-oscuro);
+    margin-bottom: 1rem;
+}
+
+/* Detalles del empleado (correo, fechas) */
+.detalle-empleado {
+    font-size: 0.87rem;
+    color: var(--color-azul);
+    line-height: 1.7;
+    margin-bottom: 0.15rem;
+}
+
+/* Botón de eliminar en la esquina de la tarjeta */
+.btn-eliminar {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background-color: transparent;
+    border: 1px solid var(--color-error);
+    color: var(--color-error);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: var(--color-error);
+    color: var(--color-texto-hueso);
+}
+
+/* SECCIÓN FORMULARIO*/
+
+.seccion-formulario {
+    background-color: var(--color-texto-suave);
+    padding: 5rem 0;
+}
+
+/* Caja contenedora del formulario */
+.caja-formulario {
+    background-color: var(--color-texto-en-oscuro);
+    padding: 2.5rem;
+    border-top: 3px solid var(--color-dorado);
+    border-radius: 10px;
+}
+
+/* Contenedor de cada campo del formulario */
+.grupo-campo {
+    margin-bottom: 0.3rem;
+}
+
+/* Etiqueta de cada campo */
+.etiqueta-campo {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    color: var(--color-azul);
+    margin-bottom: 0.45rem;
+}
+
+/* Estilos compartidos para input, select y textarea */
+.campo-texto {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    font-size: 0.93rem;
+    color: var(--color-texto);
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    /* Quitar estilos nativos del select en algunos navegadores */
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 8px;
+}
+
+.campo-texto:focus {
+    border-color: var(--color-dorado);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.18);
+}
+
+/* Se agrega con JavaScript cuando hay un error de validación */
+.campo-con-error {
+    border-color: var(--color-error);
+}
+
+/* Se agrega con JavaScript cuando el campo es válido */
+.campo-valido {
+    border-color: var(--color-exito);
+}
+
+/* Texto de error debajo del campo */
+.texto-error {
+    display: block;
+    font-size: 0.77rem;
+    color: var(--color-error);
+    margin-top: 0.2rem;
+    /* Altura mínima para evitar que el layout salte cuando aparece el error */
+    min-height: 1rem;
+}
+
+/* MODAL DE CONFIRMACIÓN */
+
+.contenido-modal {
+    background-color: var(--color-azul);
+    color: var(--color-texto-hueso);
+    border-radius: 8px;
+    border: none;
+}
+
+/* Borde interno del header y footer del modal */
+.borde-modal {
+    border-color: rgba(201, 169, 110, 0.25);
+}
+
+/* Título dentro del modal */
+.titulo-modal {
+    color: var(--color-dorado);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.06rem;
+}
+
+/* Pregunta de confirmación */
+.pregunta-modal {
+    color: var(--color-texto-hueso);
+    margin-bottom: 1rem;
+}
+
+/* Caja de resumen del empleado dentro del modal */
+.caja-resumen {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--color-dorado);
+    padding: 1rem 1.2rem;
+    font-size: 0.88rem;
+    border-radius: 8px;
+}
+
+.caja-resumen p {
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 0.3rem;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+.pie-pagina {
+    background-color: var(--color-azul-oscuro);
+    padding: 2rem 0;
+}
+
+.marca-pie {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-dorado);
+    letter-spacing: 0.05rem;
+}
+
+.texto-pie {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.82rem;
+    margin: 0;
+}
