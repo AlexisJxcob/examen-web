@@ -1,8 +1,7 @@
-/* ==========================================
-   Estilos personalizados
-   Gestión de Personal — Constructora Andina
-   Taller de Tecnologías Web | IF101IINF
-   ========================================== */
+/*  Estilos personalizados
+    Gestión de Personal — Constructora Andina
+    Taller de Tecnologías Web | IF101IINF
+    */
 
 /* Variables de color corporativo */
 :root {
@@ -412,9 +411,7 @@ body {
     margin-bottom: 0.3rem;
 }
 
-/* ==========================================
-   PIE DE PÁGINA
-   ========================================== */
+/* PIE DE PÁGINA */
 
 .pie-pagina {
     background-color: var(--color-azul-oscuro);

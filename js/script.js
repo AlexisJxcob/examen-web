@@ -2,8 +2,9 @@
 // Array global que almacena todos los empleados registrados
 let listaEmpleados = [];
 
-// Referencia al modal de Bootstrap 
+// Referencia al modal de Bootstrap (se inicializa al cargar la página)
 let modalConfirmacion;
+
 
 // INICIO: Se ejecuta cuando la página carga
 
@@ -20,13 +21,11 @@ window.onload = function () {
 
 
 // Verifica si el correo tiene un formato válido
-
-
-// Retorna: true si el formato es correcto y false si no
+// Retorna: true si el formato es correcto, false si no
 
 function correoEsValido(correo) {
-    let valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return valid.test(correo);
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(correo);
 }
 
 
@@ -72,6 +71,7 @@ function mostrarError(idCampo, idError, mensaje) {
     spanError.textContent = mensaje;
 }
 
+
 // Limpia todos los errores del formulario
 
 function limpiarErrores() {
@@ -83,6 +83,7 @@ function limpiarErrores() {
         document.getElementById(idsErrores[i]).textContent = "";
     }
 }
+
 
 // Valida todos los campos del formulario
 // Retorna: true si no hay errores, false si hay al menos uno
@@ -149,7 +150,6 @@ function validarFormulario() {
     return esValido;
 }
 
-
 // MANEJO DEL FORMULARIO Y MODAL
 
 
@@ -214,7 +214,6 @@ function confirmarAgregarEmpleado() {
     // Desplazarse suavemente a la sección de personal
     document.getElementById("personal").scrollIntoView({ behavior: "smooth" });
 }
-
 
 // MANIPULACIÓN DEL DOM — CUADRÍCULA
 
@@ -282,15 +281,26 @@ function eliminarEmpleado(id) {
 }
 
 
-// ------------------------------------------
 // Limpia todos los campos del formulario
-// ------------------------------------------
+
 function limpiarFormulario() {
-    document.getElementById("nombre").value          = "";
-    document.getElementById("apellido").value        = "";
+    document.getElementById("nombre").value           = "";
+    document.getElementById("apellido").value         = "";
     document.getElementById("fecha-nacimiento").value = "";
-    document.getElementById("correo").value          = "";
-    document.getElementById("cargo").value           = "";
-    document.getElementById("fecha-ingreso").value   = "";
+    document.getElementById("correo").value           = "";
+    document.getElementById("cargo").value            = "";
+    document.getElementById("fecha-ingreso").value    = "";
     limpiarErrores();
+}
+
+
+// Formatea una fecha de YYYY-MM-DD a DD/MM/YYYY
+// Retorna: cadena de texto con la fecha formateada
+
+function formatearFecha(fecha) {
+    if (!fecha) {
+        return "—";
+    }
+    let partes = fecha.split("-");
+    return partes[2] + "/" + partes[1] + "/" + partes[0];
 }
